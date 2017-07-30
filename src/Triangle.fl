@@ -1,0 +1,20 @@
+# data file for the Fltk User Interface Designer (fluid)
+version 1.0304
+header_name {.h}
+code_name {.cxx}
+Function {makeWindow(IO (Ref Window, Ref ValueSlider, Ref Group))} {open selected
+} {
+  Fl_Window window {
+    label {GL Triangle} open
+    xywh {706 88 496 556} type Double color 54 resizable visible
+  } {
+    Fl_Value_Slider rotation {
+      label {Rotation (degrees):}
+      xywh {25 34 445 26} type Horizontal color 53 labelfont 1 align 1 maximum 360 step 1 textsize 14
+    }
+    Fl_Group glContainer {open
+      xywh {25 85 445 445} resizable
+    } {}
+  }
+  code {return (window, rotation, glContainer);} {}
+}
